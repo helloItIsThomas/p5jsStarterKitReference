@@ -1,0 +1,9 @@
+function typePositionMouse(mySize){
+  if(mySize == undefined){
+    mySize = 100;
+  }
+
+  fill(color5);
+  textSize(mySize);
+  text(messageOne, mouseX, mouseY);
+}

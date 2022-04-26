@@ -1,0 +1,31 @@
+function typeSizeTime(posX, posY, mySize, myDelay, endPoint){
+  for(let c=0; c<clockLength; c++){
+    if(c != 30){
+      startClockSet[c] = 0;
+    }
+  }
+  startClockSet[30]++;
+
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 20;
+  }
+  if(myDelay == undefined){
+    myDelay = 100;
+  }
+  if(endPoint == undefined){
+    endPoint = 100;
+  }
+
+  if(startClockSet[30] > myDelay){
+    if(typeSizeTimeCount < endPoint){
+      typeSizeTimeCount+=4;
+    }
+  }
+  fill(color5);
+  textSize(mySize+typeSizeTimeCount);
+  text(messageOne, posX, posY);
+}

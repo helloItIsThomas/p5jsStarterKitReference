@@ -1,0 +1,11 @@
+function typePositionRandom(mySize){
+  if(mySize == undefined){
+    mySize = 100;
+  }
+
+  fill(color5);
+  textSize(mySize);
+  randomNum = random(0,width);
+  randomNum2 = random(0,height);
+  text(messageOne, random(randomNum), random(randomNum2));
+}

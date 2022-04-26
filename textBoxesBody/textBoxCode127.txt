@@ -1,0 +1,28 @@
+function typePositionTime(posX, posY, mySize, endPoint){
+  for(let c=0; c<clockLength; c++){
+    if(c != 28){
+      startClockSet[c] = 0;
+    }
+  }
+  startClockSet[28]++;
+
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+  if(endPoint == undefined){
+    endPoint = 400;
+  }
+
+  if(startClockSet[28] > 100){
+    if(moveX < endPoint){
+      moveX+=4;
+    }
+  }
+  fill(color5);
+  textSize(mySize);
+  text(messageOne, moveX, height/2);
+}

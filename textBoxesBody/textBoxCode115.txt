@@ -1,0 +1,34 @@
+function typeCopiesTime(posX, posY, mySize, myDelay, numCopies){
+  for(let c=0; c<clockLength; c++){
+    if(c != 26){
+      startClockSet[c] = 0;
+    }
+  }
+  startClockSet[26]++;
+
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+  if(myDelay == undefined){
+    myDelay = 100;
+  }
+  if(numCopies == undefined){
+    numCopies = 5;
+  }
+
+  fill(color5);
+  textSize(mySize);
+  text(messageOne, posX, posY);
+  if(startClockSet[26] > myDelay){
+    if(typeCopiesTimeCount < numCopies){
+      typeCopiesTimeCount+=1;
+    }
+    for(let x=0; x<typeCopiesTimeCount; x++){
+      text(messageOne, (x*mySize)+posX, posY*noise(x));
+      }
+    }
+}

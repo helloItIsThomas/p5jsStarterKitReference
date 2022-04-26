@@ -1,0 +1,20 @@
+function typeColorRandom(posX, posY, mySize){
+  fill(color3);
+  textSize(50);
+
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+
+  randomNum = random(0,10);
+  if(randomNum > 9){
+    fill(color2);
+  } else{
+    fill(color5);
+  }
+  text(messageOne, posX, posY);
+}

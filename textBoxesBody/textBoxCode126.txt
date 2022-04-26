@@ -1,0 +1,19 @@
+function typePositionStart(posX, posY, mySize, endPoint){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+  if(endPoint == undefined){
+    endPoint = 800;
+  }
+
+  fill(color5);
+  textSize(mySize);
+  if(moveX < endPoint){
+    moveX+=1;
+  }
+  text(messageOne, moveX + posX, posY);
+}

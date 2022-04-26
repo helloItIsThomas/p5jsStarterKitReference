@@ -1,0 +1,20 @@
+function typeSizeStart(posX, posY, mySize, endPoint){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 20;
+  }
+  if(endPoint == undefined){
+    endPoint = 100;
+  }
+
+  if(typeSizeStartCount < endPoint){
+    typeSizeStartCount+=4;
+  }
+
+  fill(color5);
+  textSize(mySize+typeSizeStartCount);
+  text(messageOne, posX, posY);
+}

@@ -1,0 +1,21 @@
+function typeRotationMouseClick(posX, posY, mySize){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+
+  if(mouseIsPressed == true){
+    typeRotationMouseClickCount+=0.1;
+  }
+
+  fill(color5);
+  textSize(mySize);
+  translate(posX, posY);
+  push();
+  rotate(typeRotationMouseClickCount);
+  text(messageOne, 0, 0);
+  pop();
+}

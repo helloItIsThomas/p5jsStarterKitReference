@@ -1,0 +1,15 @@
+function typeDrawMouseClick(posX, posY, mySize){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+
+  fill(color5);
+  textSize(mySize);
+  if(mouseIsPressed == true){
+    text(messageOne, posX, posY);
+  }
+}

@@ -1,0 +1,9 @@
+function shapeSizeRandom(posX, posY){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+
+  shapeSizeRandomCount = random(0,500);
+  circle(posX, posY, shapeSizeRandomCount);
+}

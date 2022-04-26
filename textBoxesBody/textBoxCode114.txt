@@ -1,0 +1,22 @@
+function typeCopiesStart(posX, posY, mySize, numCopies){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+  if(numCopies == undefined){
+    numCopies = 5;
+  }
+
+  fill(color5);
+  textSize(mySize);
+  text(messageOne, posX, posY);
+  if(typeCopiesStartCount < numCopies){
+    typeCopiesStartCount++;
+  }
+  for(let x=0; x<typeCopiesStartCount; x++){
+    text(messageOne, (x*mySize)+posX, posY*noise(x));
+  }
+}

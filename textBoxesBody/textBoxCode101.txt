@@ -1,0 +1,14 @@
+function shapeSizeKey(posX, posY, mySize, myScale){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+  if(myScale == undefined){
+    myScale = 100;
+  }
+
+  circle(posX, posY, mySize+(keyUp*myScale)-(keyDown*myScale));
+}

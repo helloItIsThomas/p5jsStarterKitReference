@@ -1,0 +1,30 @@
+function typeRotationTime(posX, posY, mySize, myDelay){
+  for(let c=0; c<clockLength; c++){
+    if(c != 29){
+      startClockSet[c] = 0;
+    }
+  }
+  startClockSet[29]++;
+
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+  if(myDelay == undefined){
+    myDelay = 100;
+  }
+
+  fill(color5);
+  textSize(mySize);
+  push();
+  translate(posX, posY);
+  if(startClockSet[29] > myDelay){
+    typeRotationTimeCount += 0.01;
+  }
+  rotate(typeRotationTimeCount);
+  text(messageOne, 0, 0);
+  pop();
+}

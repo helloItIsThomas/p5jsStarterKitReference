@@ -1,0 +1,14 @@
+function typeSizeRandom(posX, posY, mySize){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 20;
+  }
+
+  fill(color5);
+  typeSizeRandomCount = random(0,500);
+  textSize(mySize+typeSizeRandomCount);
+  text(messageOne, posX, posY);
+}

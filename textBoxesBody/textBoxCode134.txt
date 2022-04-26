@@ -1,0 +1,16 @@
+function typeSizeKey(posX, posY, mySize, myScale){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 20;
+  }
+  if(myScale == undefined){
+    myScale = 20;
+  }
+
+  fill(color5);
+  textSize(mySize+(keyUp*myScale)-(keyDown*myScale));
+  text(messageOne, posX, posY);
+}

@@ -1,0 +1,24 @@
+function typeColorTime(posX, posY, mySize){
+  for(let c=0; c<clockLength; c++){
+    if(c != 31){
+      startClockSet[c] = 0;
+    }
+  }
+  startClockSet[31]++;
+
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+
+  if(startClockSet[31] >= 200){
+    fill(color2);
+  } else{
+    fill(color5);
+  }
+  textSize(mySize);
+  text(messageOne, posX, posY);
+}

@@ -1,0 +1,15 @@
+function typeRotationMouse(posX, posY, mySize){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+
+  fill(color5);
+  textSize(mySize);
+  translate(posX, posY);
+  rotate(mouseY*0.025);
+  text(messageOne, 0, 0);
+}
