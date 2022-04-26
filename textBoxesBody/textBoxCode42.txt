@@ -1,0 +1,22 @@
+function lineColorStart(posX, posY, mySize){
+  for(let c=0; c<clockLength; c++){
+    if(c != 7){
+      startClockSet[c] = 0;
+    }
+  }
+  startClockSet[7]++;
+
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 300;
+  }
+
+  stroke(color3);
+  if(startClockSet[7] > 10){
+    stroke(color2);
+  }
+  line(posX-(mySize/2), posY, posX+(mySize/2), posY);
+}

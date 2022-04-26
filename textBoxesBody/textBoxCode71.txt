@@ -1,0 +1,27 @@
+function lineSizeStart(posX, posY, mySize, endPoint){
+  for(let c=0; c<clockLength; c++){
+    if(c != 15){
+      startClockSet[c] = 0;
+    }
+  }
+  startClockSet[15]++;
+
+  if(posX == undefined || posY == undefined){
+    posX = 50;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+  if(endPoint == undefined){
+    endPoint = 500;
+  }
+
+  stroke(color3);
+  if(startClockSet[15] > 5){
+    if(lineSizeStartCount < endPoint){
+      lineSizeStartCount+=10;
+    }
+  }
+  line(posX, posY, posX+mySize+lineSizeStartCount, posY);
+}

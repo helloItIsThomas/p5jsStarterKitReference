@@ -1,0 +1,7 @@
+function shapePositionRandom(posX, posY, mySize){
+  if(mySize == undefined){
+    mySize = 100;
+  }
+
+  circle(random(width),random(height), 50);
+}

@@ -1,0 +1,12 @@
+function imageRotationMouse(posX, posY, mySize){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+  translate(posX, posY);
+  rotate(mouseY*0.025);
+  image(pImg1, 0, 0, mySize, mySize);
+}

@@ -1,0 +1,16 @@
+function lineSizeKey(posX, posY, mySize, myScale){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 300;
+  }
+  if(myScale == undefined){
+    myScale = 200;
+  }
+
+  stroke(color3);
+  line(posX,posY,posX+((keyRight*myScale)-(keyLeft*myScale)),posY);
+  line(posX, posY, posX, posY+((keyDown*myScale)-(keyUp*myScale)));
+}

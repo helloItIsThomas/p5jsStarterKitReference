@@ -1,0 +1,12 @@
+function imageDrawKey(posX, posY, mySize){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+  if(keyIsPressed == true){
+    image(pImg1, posX, posY, mySize, mySize);
+  }
+}

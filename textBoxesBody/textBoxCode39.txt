@@ -1,0 +1,16 @@
+function lineColorMouse(posX, posY, mySize){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 300;
+  }
+
+  if(mouseX != pmouseX){
+    stroke(color2);
+  } else{
+    stroke(color3);
+  }
+  line(posX-(mySize/2), posY, posX+(mySize/2), posY);
+}

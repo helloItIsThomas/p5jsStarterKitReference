@@ -1,0 +1,14 @@
+function imagePositionStart(posX, posY, mySize){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+
+  if(moveX < 500){
+    moveX+=4;
+  }
+  image(pImg1, posX+moveX, posY, mySize, mySize);
+}

@@ -1,0 +1,17 @@
+function shapePositionStart(posX, posY, mySize, endPoint){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+  if(endPoint == undefined){
+    endPoint = 300;
+  }
+
+  if(moveX < endPoint){
+    moveX+=4;
+  }
+  circle(moveX+posX,posY,mySize);
+}

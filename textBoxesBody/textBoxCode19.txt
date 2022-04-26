@@ -1,0 +1,19 @@
+function imageDrawTime(posX, posY, mySize){
+  for(let c=0; c<clockLength; c++){
+    if(c != 3){
+      startClockSet[c] = 0;
+    }
+  }
+  startClockSet[3]++;
+
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+  if(startClockSet[3] > 200){
+    image(pImg2, posX, posY, mySize, mySize);
+  }
+}

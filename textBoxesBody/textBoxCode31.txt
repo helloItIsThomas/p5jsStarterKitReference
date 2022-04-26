@@ -1,0 +1,23 @@
+function imageRotationTime(posX, posY, mySize){
+  for(let c=0; c<clockLength; c++){
+    if(c != 4){
+      startClockSet[c] = 0;
+    }
+  }
+  startClockSet[4]++;
+
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+
+  translate(posX, posY);
+  if(startClockSet[4] > 200){
+    imageRotationTimeCount += 0.01;
+  }
+  rotate(imageRotationTimeCount);
+  image(pImg1, 0, 0, mySize, mySize);
+}

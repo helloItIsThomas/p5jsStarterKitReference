@@ -1,0 +1,18 @@
+function lineSizeMouseClick(posX, posY, mySize, myScale){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 300;
+  }
+  if(myScale == undefined){
+    myScale = 2;
+  }
+
+  stroke(color3);
+  if(mouseIsPressed == true){
+    lineSizeMouseClickCount++;
+  }
+  line(posX, posY, posX+(lineSizeMouseClickCount*myScale), posY+(lineSizeMouseClickCount*myScale));
+}

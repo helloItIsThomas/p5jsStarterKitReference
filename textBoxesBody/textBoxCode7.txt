@@ -1,0 +1,21 @@
+function imageContentTime(posX, posY, mySize){
+  for(let c=0; c<clockLength; c++){
+    if(c != 1){
+      startClockSet[c] = 0;
+    }
+  }
+  startClockSet[1]++;
+
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+  if(startClockSet[1] > 200){
+    image(pImg2, posX, posY, mySize, mySize);
+  } else{
+    image(pImg1, posX, posY, mySize, mySize);
+  }
+}

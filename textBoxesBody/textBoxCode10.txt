@@ -1,0 +1,16 @@
+function imageCopiesMouseClick(posX, posY, mySize){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 20;
+  }
+  image(pImg2, width*0.75,0,200,200);
+  if(mouseIsPressed){
+    imageCopiesMouseClickCount++;
+  }
+  for(let x=0; x<imageCopiesMouseClickCount; x++){
+    image(pImg2, posX+(x*mySize), posY, mySize, mySize);
+  }
+}

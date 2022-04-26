@@ -1,0 +1,15 @@
+function imageSizeKey(posX, posY, mySize, myScale){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+  if(myScale == undefined){
+    myScale = 200;
+  }
+
+  translate(posX, posY);
+  image(pImg1, 0, 0, mySize+(keyRight*myScale)-(keyLeft*myScale),(mySize+keyRight*myScale)-(keyLeft*myScale));
+}

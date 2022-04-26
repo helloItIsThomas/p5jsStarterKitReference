@@ -1,0 +1,29 @@
+function lineRotationTime(posX, posY, mySize, startTime){
+  for(let c=0; c<clockLength; c++){
+    if(c != 14){
+      startClockSet[c] = 0;
+    }
+  }
+  startClockSet[14]++;
+
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 300;
+  }
+  if(startTime == undefined){
+    startTime = 200;
+  }
+
+  stroke(color3);
+  if(startClockSet[14] > startTime){
+    lineRotationTimeCount += 0.01;
+  }
+  push();
+  translate(posX,posY);
+  rotate(lineRotationTimeCount);
+  line(-posX/2, posY, mySize, posY);
+  pop();
+}

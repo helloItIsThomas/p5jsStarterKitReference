@@ -1,0 +1,13 @@
+function imageRotationStart(posX, posY, mySize){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+  translate(posX, posY);
+  imageRotationStartCount += 0.01;
+  rotate(imageRotationStartCount);
+  image(pImg1, 0, 0, mySize, mySize);
+}

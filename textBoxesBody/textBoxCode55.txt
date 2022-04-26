@@ -1,0 +1,17 @@
+function linePositionKey(posX, posY, mySize, myDistance){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 300;
+  }
+  if(myDistance == undefined){
+    myDistance = 100
+  }
+
+  stroke(color3);
+  push();
+  line(posX+(keyRight*myDistance-keyLeft*myDistance),posY+(keyDown*myDistance-keyUp*myDistance),posX+(keyRight*myDistance-keyLeft*myDistance+mySize),posY+(keyDown*myDistance-keyUp*myDistance));
+  pop();
+}

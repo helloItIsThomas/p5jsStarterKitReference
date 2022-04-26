@@ -1,0 +1,17 @@
+function imageCopiesRandom(posX, posY, mySize){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 20;
+  }
+  image(pImg2, posX, posY, mySize, mySize);
+  randomNum = random(0,10);
+  if(randomNum > 9){
+    imageCopiesRandomCount++;
+  }
+  for(let x=0; x<imageCopiesRandomCount; x++){
+    image(pImg2, posX+(x*mySize), posY, mySize, mySize);
+  }
+}

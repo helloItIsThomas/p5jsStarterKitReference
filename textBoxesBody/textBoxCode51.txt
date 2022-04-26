@@ -1,0 +1,14 @@
+function lineDrawMouse(posX, posY, mySize){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 300;
+  }
+
+  stroke(color3);
+  if(mouseX != pmouseX){
+    line(posX-(mySize/2), posY, posX+(mySize/2), posY);
+  }
+}

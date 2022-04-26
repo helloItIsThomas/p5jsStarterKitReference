@@ -1,0 +1,11 @@
+function shapePositionMouseClick(posX, posY, mySize){
+  if(mySize == undefined){
+    mySize = 100;
+  }
+
+  if(mouseIsPressed == true){
+    shapeMousePosX = mouseX;
+    shapeMousePosY = mouseY;
+  }
+  circle(shapeMousePosX, shapeMousePosY, mySize);
+}

@@ -1,0 +1,14 @@
+function linePositionRandom(posX, posY, mySize){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 300;
+  }
+
+  stroke(color3);
+  randomNum = random(0,width);
+  randomNum2 = random(0,height);
+  line(randomNum, randomNum2, randomNum+mySize, randomNum2);
+}

@@ -1,0 +1,23 @@
+function lineCopiesStart(posX, posY, mySize){
+  for(let c=0; c<clockLength; c++){
+    if(c != 9){
+      startClockSet[c] = 0;
+    }
+  }
+  startClockSet[9]++;
+
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = 0;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+  stroke(color3);
+  if(startClockSet[9] > 10 && startClockSet[9] < width){
+    lineCopiesStartCount+=1;
+  }
+  for(let x=0; x<lineCopiesStartCount; x++){
+    line(posX, posY+x*50, posX+mySize, posY+x*50);
+  }
+}

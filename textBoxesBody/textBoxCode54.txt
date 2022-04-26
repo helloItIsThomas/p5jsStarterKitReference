@@ -1,0 +1,21 @@
+function lineDrawTime(posX, posY, mySize){
+  for(let c=0; c<clockLength; c++){
+    if(c != 12){
+      startClockSet[c] = 0;
+    }
+  }
+  startClockSet[12]++;
+
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 300;
+  }
+
+  stroke(color3);
+  if(startClockSet[12] > 100){
+    line(posX-(mySize/2), posY, posX+(mySize/2), posY);
+  }
+}

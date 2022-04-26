@@ -1,0 +1,11 @@
+function imagePositionMouseClick(mySize){
+  if(mySize == undefined){
+    mySize = 100;
+  }
+
+  if(mouseIsPressed ==  true){
+    xPos = mouseX;
+    yPos = mouseY;
+  }
+  image(pImg1, xPos, yPos, mySize, mySize);
+}

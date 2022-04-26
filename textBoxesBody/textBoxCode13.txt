@@ -1,0 +1,23 @@
+function imageCopiesTime(posX, posY, mySize){
+  for(let c=0; c<clockLength; c++){
+    if(c != 2){
+      startClockSet[c] = 0;
+    }
+  }
+  startClockSet[2]++;
+
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+  image(pImg2, posX, posY, mySize, mySize);
+  if(startClockSet[2] > 200){
+    imageCopiesTimeCount+=0.1;
+    for(let x=0; x<imageCopiesTimeCount; x++){
+      image(pImg2, posX+(x*mySize), posY, mySize, mySize);
+      }
+    }
+}

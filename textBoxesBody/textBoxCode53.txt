@@ -1,0 +1,15 @@
+function lineDrawRandom(posX, posY, mySize){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 300;
+  }
+
+  stroke(color3);
+  randomNum = random(0,10);
+  if(randomNum > 5){
+    line(posX-(mySize/2), posY, posX+(mySize/2), posY);
+  }
+}

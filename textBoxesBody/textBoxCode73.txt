@@ -1,0 +1,16 @@
+function shapeColorKey(posX, posY, mySize){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+
+  if(keyIsPressed == true){
+    fill(color2);
+  } else{
+    fill(color3);
+  }
+  circle(posX,posY,mySize);
+}

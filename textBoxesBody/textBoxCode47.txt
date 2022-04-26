@@ -1,0 +1,18 @@
+function lineCopiesRandom(posX, posY, mySize){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = 0;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+
+  stroke(color3);
+  randomNum = random(0,10);
+  if(randomNum > 9){
+    lineCopiesRandomCount+=1;
+  }
+  for(let x=0; x<lineCopiesRandomCount; x++){
+    line(posX, posY+x*50, posX+mySize, posY+x*50);
+  }
+}

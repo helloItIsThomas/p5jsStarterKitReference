@@ -1,0 +1,8 @@
+function imagePositionRandom(posX, posY, mySize){
+  if(mySize == undefined){
+    mySize = 100;
+  }
+  randomNum = random(0,width);
+  randomNum2 = random(0,height);
+  image(pImg1, randomNum, randomNum2, mySize, mySize);
+}

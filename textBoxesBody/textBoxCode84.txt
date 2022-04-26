@@ -1,0 +1,30 @@
+function shapeCopiesTime(posX, posY, mySize, myDelay, numCopies){
+  for(let c=0; c<clockLength; c++){
+    if(c != 19){
+      startClockSet[c] = 0;
+    }
+  }
+  startClockSet[19]++;
+
+  if(posX == undefined || posY == undefined){
+    posX = 50;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+  if(myDelay == undefined){
+    myDelay = 100;
+  }
+  if(numCopies == undefined){
+    numCopies = 5;
+  }
+
+  stroke(color3);
+  if(startClockSet[19] > myDelay && shapeCopiesTimeCount < numCopies){
+    shapeCopiesTimeCount+=1;
+  }
+  for(let x=0; x<shapeCopiesTimeCount; x++){
+    circle(x*mySize+posX,posY,mySize);
+  }
+}

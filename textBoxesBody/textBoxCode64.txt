@@ -1,0 +1,19 @@
+function lineRotationRandom(posX, posY, mySize){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 300;
+  }
+
+  stroke(color3);
+  if((frameCount*0.1)%2 == 1){
+    lineRotationRandomCount += random(0,360);
+  }
+  push();
+  translate(posX,posY);
+  rotate(lineRotationRandomCount);
+  line(-posX/2, posY, mySize, posY);
+  pop();
+}

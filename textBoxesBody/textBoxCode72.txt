@@ -1,0 +1,30 @@
+function lineSizeTime(posX, posY, mySize, endPoint, myDelay){
+  for(let c=0; c<clockLength; c++){
+    if(c != 16){
+      startClockSet[c] = 0;
+    }
+  }
+  startClockSet[16]++;
+
+  if(posX == undefined || posY == undefined){
+    posX = 100;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+  if(endPoint == undefined){
+    endPoint = 500;
+  }
+  if(myDelay == undefined){
+    myDelay = 100;
+  }
+
+  stroke(color3);
+  if(startClockSet[16] > myDelay){
+    if(lineSizeTimeCount < endPoint){
+      lineSizeTimeCount+=10;
+    }
+  }
+  line(posX, posY, posX+mySize+lineSizeTimeCount, posY);
+}

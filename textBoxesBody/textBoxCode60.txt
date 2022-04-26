@@ -1,0 +1,27 @@
+function linePositionTime(posX, posY, mySize, startTime){
+  for(let c=0; c<clockLength; c++){
+    if(c != 13){
+      startClockSet[c] = 0;
+    }
+  }
+  startClockSet[13]++;
+
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 300;
+  }
+  if(startTime == undefined){
+    startTime = 200;
+  }
+
+  stroke(color3);
+  if(startClockSet[13] > startTime){
+    if(moveX < 500){
+      moveX+=4;
+    }
+  }
+  line(moveX+posX, posY, moveX+posX+mySize, posY);
+}

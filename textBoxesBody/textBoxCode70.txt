@@ -1,0 +1,16 @@
+function lineSizeRandom(posX, posY, mySize, myDistance){
+  if(posX == undefined || posY == undefined){
+    posX = 0;
+    posY = 0;
+  }
+  if(mySize == undefined){
+    mySize = 300;
+  }
+  if(myDistance == undefined){
+    myDistance = height;
+  }
+
+  stroke(color3);
+  lineSizeRandomCount = random(0, myDistance);
+  line(posX, posY, posX+lineSizeRandomCount, posY+lineSizeRandomCount);
+}

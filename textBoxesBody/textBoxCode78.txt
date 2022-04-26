@@ -1,0 +1,25 @@
+function shapeColorTime(posX, posY, mySize, myDelay){
+  for(let c=0; c<clockLength; c++){
+    if(c != 18){
+      startClockSet[c] = 0;
+    }
+  }
+  startClockSet[18]++;
+
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+  if(myDelay == undefined){
+    myDelay = 100;
+  }
+
+  fill(color3);
+  if(startClockSet[18] > myDelay){
+    fill(color2);
+  }
+  circle(posX,posY,mySize);
+}

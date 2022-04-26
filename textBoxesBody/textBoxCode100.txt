@@ -1,0 +1,26 @@
+function shapeRotationTime(posX, posY, mySize){
+  for(let c=0; c<clockLength; c++){
+    if(c != 22){
+      startClockSet[c] = 0;
+    }
+  }
+  startClockSet[22]++;
+
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 100;
+  }
+  translate(width*0.75,height/2);
+  if(startClockSet[22] > 100){
+    shapeRotationTimeCount += 0.01;
+  }
+
+  push();
+  rotate(shapeRotationTimeCount);
+  translate(-mySize/2, -mySize/2);
+  rect(0, 0, mySize, mySize);
+  pop();
+}

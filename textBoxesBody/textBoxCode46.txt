@@ -1,0 +1,17 @@
+function lineCopiesMouseClick(posX, posY, mySize){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 300;
+  }
+
+  stroke(color3);
+  if(mouseIsPressed == true){
+    lineCopiesMouseClickCount+=1;
+  }
+  for(let x=0; x<lineCopiesMouseClickCount; x++){
+    line(posX*x, posY, (posX+mySize)*x, posY);
+  }
+}

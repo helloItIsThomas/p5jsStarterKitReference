@@ -1,0 +1,17 @@
+function lineRotationKey(posX, posY, mySize){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+  if(mySize == undefined){
+    mySize = 300;
+  }
+
+  stroke(color3);
+  push();
+  translate(posX,posY);
+  rotate(keyRight*QUARTER_PI);
+  rotate(-1*(keyLeft*QUARTER_PI));
+  line(-posX/2, posY, mySize, posY);
+  pop();
+}

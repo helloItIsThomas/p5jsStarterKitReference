@@ -1,0 +1,7 @@
+function shapePositionMouse(mySize){
+  if(mySize == undefined){
+    mySize = 100;
+  }
+
+  circle(mouseX, mouseY ,mySize);
+}
