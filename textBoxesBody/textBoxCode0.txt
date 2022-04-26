@@ -1,0 +1,13 @@
+function lineDrawStart(posX, posY, mySize){
+  if(posX == undefined || posY == undefined){
+    posX = width*0.75;
+    posY = height/2;
+  }
+
+  if(mySize == undefined){
+    mySize = 100;
+  }
+  stroke(255,0,0);
+  strokeWeight(5);
+  line(posX, posY, posX+mySize, posY+mySize);
+}
