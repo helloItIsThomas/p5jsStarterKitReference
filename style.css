@@ -1,0 +1,281 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+a {
+  position: relative;
+  background-color: #E6B8B9;
+  text-align: center;
+  /* width: 40vw; */
+  color: #000000;
+  font-size: 30px;
+  padding-top: 12px;
+  padding-left: 4vw;
+  padding-right: 16vw;
+  border-radius: 5px;
+  /* -webkit-text-stroke-width: 1px; */
+  /* -webkit-text-stroke-color: #E6B8B9; */
+  /* fill: #E6B8B9; */
+  /* stroke: #E6B8B9; */
+  font-family: tiny_160;
+  src: url("data/tiny_160.otf");
+  text-decoration: none;
+}
+
+.a2{
+  font-size:5vh;
+  font-family: tiny_160;
+  color: #000000;
+  padding: 0;
+  /* left: 20; */
+  /* top: 45vh; */
+}
+
+#link1{
+  background-color: #E6B8B9;
+  color: #000000;
+  border: 2px solid #000000;
+  stroke: #E6B8B9;
+}
+#link2{
+  background-color: #000000;
+  color: #E6B8B9;
+  border: 2px solid #E6B8B9;
+  stroke: #E6B8B9;
+}
+
+
+/* |||||||||||||||||||||||||||||||||||||||| */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  left: 33vw;
+  top: 11.45vh;
+  width: 4.5vw;
+  height: 3.8vh;
+}
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border: 1px solid #E6B8B9;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  /* height: 26px; */
+  /* width: 26px; */
+  height: 3.1vh;
+  width: 3.1vh;
+  left: 3px;
+  bottom: 3px;
+  background-color: #E6B8B9;
+  -webkit-transition: .15s;
+  transition: .15s;
+}
+input:checked + .slider {
+  background-color: #E6B8B9;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .slider:before {
+  background-color: #000000;
+  -webkit-transform: 2.2vw;
+  -ms-transform: translateX(2.2vw);
+  transform: translateX(2.2vw);
+}
+/* Rounded sliders */
+.slider.round {
+  /* border-radius: 34px; */
+  border-radius: 3.8vh;
+}
+.slider.round:before {
+  background-color: #E6B8B9;
+  /* background-color: #000000; */
+  border-radius: 50%;
+}
+/* |||||||||||||||||||||||||||||||||||||||| */
+
+.divToggleMenu{
+  left: 10px;
+  top: 20vh;
+  border-radius: 10px;
+  position: absolute;
+  width: 37.35vw;
+  height: 65vh;
+  border: 1px solid #E6B8B9;
+}
+
+div.image::before{
+  content:
+}
+
+.aboutBody{
+  background-color: #E6B8B9;
+}
+
+.myHeader{
+  /* style = font-size:8vw; */
+  position: absolute;
+  font-family: tiny_160;
+  color: #E6B8B9;
+  /* left: 20; */
+  /* top: 5vh; */
+  font-size:20vh;
+}
+
+/* ||||||||||||| */
+.divOne{
+  /* z-index: 1; */
+  /* background-color: #FFFFFF; */
+  position: absolute;
+  padding-left: 20px;
+  padding-top: 200px;
+  /* top: 200px; */
+  width: 100vw - 20px;
+  height: 100vh - 200px;
+}
+.divFooter{
+  /* z-index: 2; */
+  position: absolute;
+  width: 95vw;
+  bottom: 10;
+  left: 10;
+}
+.divFooterAbout{
+  position: fixed;
+  width: 100vw;
+  bottom: 10;
+  left: 10;
+}
+.myHeader4{
+  /* position: relative; */
+  /* style = font-size:8vw; */
+  font-family: tiny_160;
+  color: #E6B8B9;
+  /* left: 20; */
+  /* top: 5vh; */
+  font-size: 12.5vw;
+  /* background-color: blue; */
+  margin: 0px;
+  padding: 0px;
+  margin-top: 5vw;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #000000;
+}
+.myHeader2{
+  /* position: relative; */
+  /* style = font-size:8vw; */
+  font-family: tiny_160;
+  color: #000000;
+  /* left: 20; */
+  /* top: 5vh; */
+  font-size: 12.5vw;
+  /* background-color: blue; */
+  margin: 0px;
+  padding: 0px;
+  margin-top: 5vw;
+}
+.myHeader1{
+  position: relative;
+  /* style = font-size:8vw; */
+  font-family: tiny_160;
+  color: #E6B8B9;
+  /* left: 20; */
+  /* top: 5vh; */
+  font-size:15vh;
+  /* background-color: blue; */
+  margin: 0px;
+}
+.myBody35{
+  /* margin: 0px; */
+  /* width: 50vw; */
+  /* style = font-size:8vw; */
+  /* position: absolute; */
+  /* background-color: white; */
+  font-family: apercu;
+  color: #E6B8B9;
+  /* left: 20; */
+  /* top: 45vh; */
+  font-size:3vh;
+}
+.myBody3{
+  font-family: apercu;
+  color: #000000;
+  font-size:2vw;
+  line-height: 4vw;
+}
+.myBody5{
+  width: 95vw;
+  background-color: black;
+  font-family: apercu;
+  color: #E6B8B9;
+  padding: 1vw;
+  font-size:2vh;
+  line-height: 4vw;
+}
+/* ||||||||||||| */
+
+.myHeader3{
+  /* style = font-size:8vw; */
+  position: absolute;
+  color: #E6B8B9;
+  /* -webkit-text-stroke-width: 1px; */
+  /* -webkit-text-stroke-color: #000000; */
+  font-family: tiny_160;
+  /* left: 20; */
+  /* top: 65vh; */
+  font-size:20vh;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #E6B8B9;
+}
+
+.myBody{
+  width: 50vw;
+  /* style = font-size:8vw; */
+  /* position: relative; */
+  font-family: apercu;
+  color: #E6B8B9;
+  /* left: 20; */
+  /* top: 45vh; */
+  /* font-size:3vh; */
+}
+.myBody4{
+  width: 50vw;
+  /* style = font-size:8vw; */
+  /* position: absolute; */
+  font-family: apercu;
+  color: #000000;
+  left: 20;
+  top: 95vh;
+  font-size:3vh;
+}
+.myBody2{
+  width: 50vw;
+  /* style = font-size:8vw; */
+  /* position: relative; */
+  font-family: apercu;
+  color: #E6B8B9;
+  /* left: 20; */
+  top: 45vh;
+  font-size:3vh;
+}
